@@ -27,7 +27,7 @@ jobs:
         run: ./SquareEquationTest ./SquareEquationLib/bin/Debug/net7.0/SquareEquationLib.dll
 
       - name: Unit-Test
-        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+        run: cd Scenarios.Tests && dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 
       - name: Codecov
         uses: codecov/codecov-action@v3
